@@ -6,12 +6,12 @@
 * reupload izin anjg gua gua cape buat nya!!
 * ini script pribadi gua!!
 */
-const XPTN = '👾XP-TN👾'; // Nama Bot Whatsapp
-const instagram = 'https://instagram.com/mragung23'; // Nama Instagramlu cok
-const nomer = 'https://Wa.me/+6289655478810'; // Nomor whatsapplu cok
-const aktif = 'Tergantung jaringan'; // Kapan bot lu aktif
-const groupwa = 'https://chat.whatsapp.com/GDdd0I3WlF5LnMVifmS7rN'; // OFFICIAL GRUP LU 1
-const youtube = 'https://www.youtube.com/channel/UCMiQsqzWvj-zKxNlFlG_Wiw'; // OFFICIAL GRUP LU 2
+const XPTN = '🤖UWBC-BOT🤖'; // Nama Bot Whatsapp
+const instagram = 'https://instagram.com/Uwiw_Bocah'; // Nama Instagramlu cok
+const nomer = 'https://Wa.me/+6285813655726'; // Nomor whatsapplu cok
+const aktif = 'Tergantung Owner'; // Kapan bot lu aktif
+const groupwa = 'https://chat.whatsapp.com/D5U6a2bvurWCrVk6R925a6'; // OFFICIAL GRUP LU 1
+const youtube = 'BLANK'; // OFFICIAL GRUP LU 2
 //
 const qrcode = require("qrcode-terminal");
 const moment = require("moment");
@@ -38,8 +38,8 @@ const readTextInImage = require('./lib/ocr')
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
             + 'FN:XP Ganss\n' // full name
-            + 'ORG:Owner XPTN Bot;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=6289655478810:+62 896-5547-8810\n' // WhatsApp ID + phone number
+            + 'ORG:Owner UWBC bot;\n' // the organization of the contact
+            + 'TEL;type=CELL;type=VOICE;waid=6285813655726:+62 858-1365-5726\n' // WhatsApp ID + phone number
             + 'END:VCARD'
 //
 const
@@ -93,7 +93,7 @@ conn.on('user-presence-update', json => console.log(`[ ${moment().format("HH:mm:
 conn.on('message-status-update', json =>
 {
    const participant = json.participant ? ' (' + json.participant + ')' : '' // participant exists when the message is from a group
-   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @mragung23`)
+   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @Uwiw_Bocah`)
 })
 
 conn.on('message-new', async(m) =>
@@ -161,12 +161,12 @@ else if (text == 'Asu'){
 conn.sendMessage(id, 'Lu Asw' ,MessageType.text);
 }
 else if (text == '.owner'){
-conn.sendMessage(id, 'Owner XP-TN wa.me/+6289655478810' ,MessageType.text);
+conn.sendMessage(id, 'Owner UW-BC wa.me/+6285813655726' ,MessageType.text);
 }
-else if (text == 'Agung'){
-conn.sendMessage(id, 'Aku BOT nya XP-TN' ,MessageType.text);
+else if (text == 'yosep'){
+conn.sendMessage(id, 'Aku BOT nya UW-BC' ,MessageType.text);
 }
-else if (text == 'wenda'){
+else if (text == 'wida'){
 conn.sendMessage(id, 'pacar owner ihh' ,MessageType.text);
 }
 else if (text == 'bangsat'){
@@ -188,7 +188,7 @@ else if (text == 'Hai'){
 conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh .help' ,MessageType.text);
 }
 else if (text == '.ttp'){
-conn.sendMessage(id, ' *COMMAND PREMIUM CHAT WA https://wa.me/6289655478810* ' ,MessageType.text);
+conn.sendMessage(id, ' *COMMAND PREMIUM CHAT WA https://wa.me/6285813655726* ' ,MessageType.text);
 }
 else if (text == 'Woi'){
 conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh .help' ,MessageType.text);
@@ -541,7 +541,7 @@ let hasil = `${id.split("@s.whatsapp.net")[0]}`;
 conn.sendMessage(id, 'SUCCES, GRUP TELAH DIBUKA' ,MessageType.text, { quoted: m } );
 }
 else if (text == '.closegc'){
- let hasil = `${id.split("@s.whatsapp.net")[0]}`;
+let hasil = `${id.split("@s.whatsapp.net")[0]}`;
    conn.groupSettingChange (hasil, GroupSettingChange.messageSend, true);
 conn.sendMessage(id, 'SUCCES, GRUP TELAH DITUTUP' ,MessageType.text, { quoted: m } );
 }
@@ -891,6 +891,7 @@ axios.get(`https://api.terhambar.com/ninja?nama=${teks}`).then((res) => {
 })
 }
 if (text == '.help'){
+let hasil = `${id.split("@s.whatsapp.net")[0]}`;	
 const corohelp = await get.get('https://covid19.mathdro.id/api/countries/id').json()
 var date = new Date();
 var tahun = date.getFullYear();
@@ -928,6 +929,7 @@ var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, xp.xp(id, XPTN, corohelp, tampilTanggal, tampilWaktu, instagram, nomer, aktif, groupwa, youtube) ,MessageType.text);
 }
 if (text == '.tools1'){
+let hasil = `${id.split("@s.whatsapp.net")[0]}`;	
 const corohelp = await get.get('https://covid19.mathdro.id/api/countries/id').json()
 var date = new Date();
 var tahun = date.getFullYear();
@@ -965,6 +967,7 @@ var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, xp1.xp1(id, XPTN, corohelp, tampilTanggal, tampilWaktu, instagram, nomer, aktif, groupwa, youtube) ,MessageType.text);
 }
 if (text == '.tools2'){
+let hasil = `${id.split("@s.whatsapp.net")[0]}`;	
 const corohelp = await get.get('https://covid19.mathdro.id/api/countries/id').json()
 var date = new Date();
 var tahun = date.getFullYear();
@@ -1002,6 +1005,7 @@ var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, xp2.xp2(id, XPTN, corohelp, tampilTanggal, tampilWaktu, instagram, nomer, aktif, groupwa, youtube) ,MessageType.text);
 }
 if (text == '.tools3'){
+let hasil = `${id.split("@s.whatsapp.net")[0]}`;	
 const corohelp = await get.get('https://covid19.mathdro.id/api/countries/id').json()
 var date = new Date();
 var tahun = date.getFullYear();
@@ -1039,6 +1043,7 @@ var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, xp3.xp3(id, XPTN, corohelp, tampilTanggal, tampilWaktu, instagram, nomer, aktif, groupwa, youtube) ,MessageType.text);
 }
 if (text == '.tools4'){
+let hasil = `${id.split("@s.whatsapp.net")[0]}`;	
 const corohelp = await get.get('https://covid19.mathdro.id/api/countries/id').json()
 var date = new Date();
 var tahun = date.getFullYear();
@@ -1076,6 +1081,7 @@ var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, xp4.xp4(id, XPTN, corohelp, tampilTanggal, tampilWaktu, instagram, nomer, aktif, groupwa, youtube) ,MessageType.text);
 }
 if (text == '.tools5'){
+let hasil = `${id.split("@s.whatsapp.net")[0]}`;	
 const corohelp = await get.get('https://covid19.mathdro.id/api/countries/id').json()
 var date = new Date();
 var tahun = date.getFullYear();
@@ -1113,6 +1119,7 @@ var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, xp5.xp5(id, XPTN, corohelp, tampilTanggal, tampilWaktu, instagram, nomer, aktif, groupwa, youtube) ,MessageType.text);
 }
 if (text == '.tools6'){
+let hasil = `${id.split("@s.whatsapp.net")[0]}`;	
 const corohelp = await get.get('https://covid19.mathdro.id/api/countries/id').json()
 var date = new Date();
 var tahun = date.getFullYear();
@@ -1412,28 +1419,28 @@ else if (text == '.foto'){
 conn.sendMessage(id, 'kirim .foto cewek/cowok\n\nContoh: .foto cewek' ,MessageType.text);
 }
 else if (text == '.help'){
-conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *🤖UWBC-BOT🤖* , Follow Instagram Mimin Yah😻 : https://instagram.com/@Uwiw_Bocah' ,MessageType.text);
 }
 else if (text == '.tools1'){
-conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *🤖UWBC-BOT🤖* , Follow Instagram Mimin Yah😻 : https://instagram.com/@Uwiw_Bocah' ,MessageType.text);
 }
 else if (text == '.menu'){
-conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *🤖UWBC-BOT🤖* , Follow Instagram Mimin Yah😻 : https://instagram.com/@Uwiw_Bocah' ,MessageType.text);
 }
 else if (text == '.tool2'){
-conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *🤖UWBC-BOT🤖* , Follow Instagram Mimin Yah😻 : https://instagram.com/@Uwiw_Bocah' ,MessageType.text);
 }
 else if (text == '.tools3'){
-conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *🤖UWBC-BOT🤖* , Follow Instagram Mimin Yah😻 : https://instagram.com/@Uwiw_Bocah' ,MessageType.text);
 }
 else if (text == '.tools4'){
-conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *🤖UWBC-BOT🤖* , Follow Instagram Mimin Yah😻 : https://instagram.com/@Uwiw_Bocah' ,MessageType.text);
 }
 else if (text == '.tools5'){
-conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *🤖UWBC-BOT🤖* , Follow Instagram Mimin Yah😻 : https://instagram.com/@Uwiw_Bocah' ,MessageType.text);
 }
 else if (text == '.tools6'){
-conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *🤖UWBC-BOT🤖* , Follow Instagram Mimin Yah😻 : https://instagram.com/@Uwiw_Bocah' ,MessageType.text);
 }
 if (messageType == 'imageMessage')
    {
