@@ -37,7 +37,7 @@ const sellernomor = require("./lib/sellernomor.js");
 const readTextInImage = require('./lib/ocr')
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
-            + 'FN:XP Ganss\n' // full name
+            + 'FN:UW-BC Ganss\n' // full name
             + 'ORG:Owner UWBC bot;\n' // the organization of the contact
             + 'TEL;type=CELL;type=VOICE;waid=6285813655726:+62 858-1365-5726\n' // WhatsApp ID + phone number
             + 'END:VCARD'
