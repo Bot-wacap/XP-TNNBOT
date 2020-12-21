@@ -10,8 +10,8 @@ const XPTN = '🤖UW-BCBOT🤖'; // Nama Bot Whatsapp
 const instagram = 'https://instagram.com/Uwiw_Bocah'; // Nama Instagramlu cok
 const nomer = 'https://Wa.me/+6285813655726'; // Nomor whatsapplu cok
 const aktif = 'Tergantung Owner'; // Kapan bot lu aktif
-const groupwa = ''; // OFFICIAL GRUP LU 1
-const youtube = 'https://www.youtube.com/channel/UCMiQsqzWvj-zKxNlFlG_Wiw'; // OFFICIAL GRUP LU 2
+const groupwa = 'https://chat.whatsapp.com/E6TvJFpnPgL2HJ3LaFWNPC'; // OFFICIAL GRUP LU 1
+const youtube = 'BELUM ADA'; // OFFICIAL GRUP LU 2
 //
 const qrcode = require("qrcode-terminal");
 const moment = require("moment");
@@ -37,9 +37,9 @@ const sellernomor = require("./lib/sellernomor.js");
 const readTextInImage = require('./lib/ocr')
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
-            + 'FN:XP Ganss\n' // full name
-            + 'ORG:Owner XPTN Bot;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=6289655478810:+62 896-5547-8810\n' // WhatsApp ID + phone number
+            + 'FN:UW-BC\n' // full name
+            + 'ORG:Owner UW-BC Bot;\n' // the organization of the contact
+            + 'TEL;type=CELL;type=VOICE;waid=6285813655726:+62 858-1365-5726\n' // WhatsApp ID + phone number
             + 'END:VCARD'
 //
 const
@@ -93,7 +93,7 @@ conn.on('user-presence-update', json => console.log(`[ ${moment().format("HH:mm:
 conn.on('message-status-update', json =>
 {
    const participant = json.participant ? ' (' + json.participant + ')' : '' // participant exists when the message is from a group
-   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @mragung23`)
+   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @Uwiw_Bocah`)
 })
 
 conn.on('message-new', async(m) =>
@@ -188,7 +188,7 @@ else if (text == 'Hai'){
 conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh .help' ,MessageType.text);
 }
 else if (text == '.ttp'){
-conn.sendMessage(id, ' *COMMAND PREMIUM CHAT WA https://wa.me/6289655478810* ' ,MessageType.text);
+conn.sendMessage(id, ' *COMMAND PREMIUM CHAT WA https://wa.me/6285813655726* ' ,MessageType.text);
 }
 else if (text == 'Woi'){
 conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh .help' ,MessageType.text);
@@ -235,8 +235,8 @@ conn.sendMessage(id, 'kawan1 iskandar wa.me/+60136670107' ,MessageType.text);
 else if (text == '.coowner'){
 conn.sendMessage(id, 'kawan2 testing script wa.me/+6282232931618' ,MessageType.text);
 }
-else if (text == '.groupbot'){
-conn.sendMessage(id, 'group bot whatsapp https://chat.whatsapp.com/GDdd0I3WlF5LnMVifmS7rN' ,MessageType.text);
+else if (text == '°groupbot'){
+conn.sendMessage(id, 'group bot whatsapp BLANK' ,MessageType.text);
 }
 else if (text == '.tools1'){
 conn.sendMessage(id, ' *Menampilkan Fitur tools1!!!* ' ,MessageType.text);
