@@ -2216,7 +2216,16 @@ if (text.includes('.ttp')){
         })
     })
 }
-else if (text == '.hello1'){
+break
+case 'sticker':
+	const image = await client.downloadAndSaveMediaMessage(m)
+ exec('cwebp -q 50 ' + image + ' -o temp/' + time + '.webp', (error, stdout, stderr) => {
+	 let result = fs.readFileSync('temp/' + time + '.webp')
+	 client.sendMessage(id, result, MessageType.sticker)
+	}) 
+	})
+}
+	 if (text == '.hello1'){
 let hasil = fs.readFileSync('mp3/' + 'PTT' + '.wav')
  conn.sendMessage(id, hasil, MessageType.audio, { quoted: m } )
 }
